@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIRAGO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting</title>
 </head>
 <body>
-    <div>Hello world!</div>
+  <p>Redirecting in <span id="countdown">3</span> seconds...</p>
+
+  <script>
+    let remaining = 3;
+    const countdown = document.getElementById('countdown');
+    const interval = setInterval(() => {
+      remaining -= 1;
+      countdown.textContent = remaining;
+
+      if (remaining === 0) {
+        clearInterval(interval);
+        window.location.replace('https://pirago.vn');
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
