@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecting</title>
+  <title>PIRAGO</title>
 </head>
 <body>
   <p>Redirecting in <span id="countdown">3</span> seconds...</p>
 
   <script>
-    let remaining = 3;
-    const countdown = document.getElementById('countdown');
-    const interval = setInterval(() => {
+    var remaining = 3;
+    var countdown = document.getElementById('countdown');
+    var interval = setInterval(() => {
       remaining -= 1;
       countdown.textContent = remaining;
 
